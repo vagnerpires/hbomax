@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+
+:root {
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(45deg,
+            #9b34ef 0%,
+            #490cb0 20%,
+            transparent 50%);
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(90deg,
+            #5516ba,
+            rgba(255, 0, 229, 0.5) 80%);
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+
+    scroll-behavior: smooth;
+}
+
+/* Custom Scroll */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    background-image: url("../images/background-movies-series.png");
+    background-size: cover;
+    min-height: 100vh;
+    height: auto;
+}
+
+/* Navbar */
+
+.menu {
+    background-color: var(--nav-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 16px;
+    position: fixed;
+    z-index: 1;
+    position: relative;
+}
+
+.menu__logo {
+    max-width: 160px;
+}
+
+.menu__logo-image {
+    width: 100%;
+}
+
+.menu__item {
+    text-decoration: none;
+    font-size: 0.75rem;
+    color: var(--text-color);
+    margin-right: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.menu__item--assine {
+    padding: 8px 26px;
+    background-color: var(--tertiary-color);
+    border-radius: 100px;
+    border: none;
+    transition: background 1s, color 1s;
+}
+
+.menu__item--assine:hover {
+    background-color: var(--btn-link-bg-color);
+    color: var(--btn-link-color);
+}
+
+/* Main */
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Quicksand", cursive;
+  width: 100%;
+  min-height: 70vh;
+  padding: 24px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px;
+    text-align: center;
+}
+
+.login {
+  width: 100%;
+  max-width: 800px;
+  background-color: var(--form-bg-color);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px;
+}
+
+.login__title {
+  letter-spacing: 2px;
+  font-size: 1.25rem;
+  margin-bottom: 24px;
+}
+
+.login__label {
+  text-align: left;
+}
+
+.login__field {
+  background: var(--form-field-bg-color);
+  border: var(--form-field-border);
+  border-radius: 8px;
+  color: var(--text-color);
+  padding: 16px;
+  font-size: 1rem;
+}
+
+.login__field::placeholder {
+  color: var(--form-field-placeholder);
+}
+
+.login__field:invalid {
+  border-color: var(--form-field-error);
+}
+
+.login__actions {
+  margin-top: 24px;
+  text-align: left;
+}
+
+.button {
+    padding: 16px 40px;
+    background-color: var(--tertiary-color);
+    border-radius: 500px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+    letter-spacing: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.button--gradient {
+    background: var(--btn-bg-color-gradient);
+    outline: 3px solid transparent;
+    transition: background 1s, outline 1s, transform 1s;
+    background-size: 250%;
+}
+
+.button.button--gradient:hover {
+  background-color: transparent;
+  background-position: 100%;
+  outline: 2px solid var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.login__link {
+  color: var(--link-color);
+  text-decoration: none;
+  margin-left: 24px;
+  font-weight: bold;
+}
+
+p {
+    font-family: "Quicksand", sans-serif;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.text--small {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* Footer */
+
+.footer__link {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: var(--link-color);
+    text-decoration: none;
+    margin: 0 14px;
+    letter-spacing: 2px;
+    transition: color 0.5s;
+    font-size: 0.875rem;
+}
+
+.footer__legal {
+    font-size: 0.75rem;
+    margin: 16px 0;
+    color: var(--link-color);
+}
+
+.footer__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 80px;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    height: auto;
+  }
+
+  .login__actions .button {
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  .login__link {
+    margin: 0;
+  }
+}
