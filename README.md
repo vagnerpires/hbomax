@@ -15,7 +15,6 @@
 
 - [✨ Features](#features)
 - [📦 Temas abordados](#topics)
-- [🌈 Demonstração](#demo)
 - [💻 Autor](#author)
 
 <h2 id="features">✨ Features</h2>
@@ -43,10 +42,6 @@ Recursos CSS presentes no projeto:
 - Transformações 2D e 3D
 - Transições e animações
 - Tratamento de campos inválidos no formulário
-
-<h2 id="demo">🌈 Demonstração</h2>
-
-Você pode acessar ao resultado final do projeto [clicando aqui](https://vagnerpires.github.io/hbomax/).
 
 <h2 id="author">💻 Autor</h2>
 <p>
